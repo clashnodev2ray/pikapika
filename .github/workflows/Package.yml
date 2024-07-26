@@ -1,22 +1,11 @@
 name: Package
 on:
-  workflow_dispatch:
-    inputs:
-      PACKAGE_IOS:
-        type: boolean
-        default: false
-        description: 'iOS version'
-        required: true
-      PACKAGE_ANDROID:
-        type: boolean
-        default: false
-        description: 'Android version'
-        required: true
-      PACKAGE_LINUX:
-        type: boolean
-        default: false
-        description: 'Linux version'
+ push:
+    tags:
+      - 'v*'
 
+ 
+    
 jobs:
   package:
     strategy:
