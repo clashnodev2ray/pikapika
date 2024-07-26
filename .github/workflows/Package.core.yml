@@ -1,6 +1,10 @@
 name: Package-core
 on:
-  workflow_dispatch:
+
+ 
+  push:
+    tags:
+      - 'v*'
 
 env:
   GH_TOKEN: ${{ secrets.KEYSTORE }}
